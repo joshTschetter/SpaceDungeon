@@ -17,6 +17,8 @@
 		9C031D3C21A49070005D8A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C031D3A21A49070005D8A22 /* LaunchScreen.storyboard */; };
 		9C031D4721A49070005D8A22 /* SpaceDungeonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D4621A49070005D8A22 /* SpaceDungeonTests.swift */; };
 		9C031D5221A49070005D8A22 /* SpaceDungeonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D5121A49070005D8A22 /* SpaceDungeonUITests.swift */; };
+		9C031D6021A49153005D8A22 /* Ledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D5F21A49153005D8A22 /* Ledge.swift */; };
+		9C031DA221A92698005D8A22 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031DA121A92697005D8A22 /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9C031D4D21A49070005D8A22 /* SpaceDungeonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceDungeonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C031D5121A49070005D8A22 /* SpaceDungeonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceDungeonUITests.swift; sourceTree = "<group>"; };
 		9C031D5321A49070005D8A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C031D5F21A49153005D8A22 /* Ledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledge.swift; sourceTree = "<group>"; };
+		9C031DA121A92697005D8A22 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				9C031D2D21A4906D005D8A22 /* GameScene.sks */,
 				9C031D2F21A4906D005D8A22 /* Actions.sks */,
 				9C031D3121A4906D005D8A22 /* GameScene.swift */,
+				9C031DA121A92697005D8A22 /* Level.swift */,
+				9C031D5F21A49153005D8A22 /* Ledge.swift */,
 				9C031D3321A4906D005D8A22 /* GameViewController.swift */,
 				9C031D3521A4906D005D8A22 /* Main.storyboard */,
 				9C031D3821A49070005D8A22 /* Assets.xcassets */,
@@ -270,6 +276,8 @@
 				9C031D3221A4906D005D8A22 /* GameScene.swift in Sources */,
 				9C031D3421A4906D005D8A22 /* GameViewController.swift in Sources */,
 				9C031D2C21A4906D005D8A22 /* AppDelegate.swift in Sources */,
+				9C031DA221A92698005D8A22 /* Level.swift in Sources */,
+				9C031D6021A49153005D8A22 /* Ledge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
