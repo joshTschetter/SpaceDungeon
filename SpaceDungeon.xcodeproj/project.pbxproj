@@ -20,6 +20,7 @@
 		9C031D6021A49153005D8A22 /* Ledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D5F21A49153005D8A22 /* Ledge.swift */; };
 		9C031DA221A92698005D8A22 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031DA121A92697005D8A22 /* Level.swift */; };
 		9C73A9E021B84AA6003C63ED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73A9DF21B84AA6003C63ED /* Player.swift */; };
+		9C77983721BFFBC00093D3AB /* Background Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77983621BFFBBF0093D3AB /* Background Tile.swift */; };
 		9C8DD75921B8D881001C4B9F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75821B8D881001C4B9F /* Background.swift */; };
 		9C8DD75B21B996C0001C4B9F /* StaticBackgroundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */; };
 		9C8DD75D21B9AF6D001C4B9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75C21B9AF6D001C4B9F /* Game.swift */; };

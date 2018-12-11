@@ -36,4 +36,5 @@ class BackgroundTile {
     func getYpos()-> Int {
         return yPosition
     }
+    
 }
