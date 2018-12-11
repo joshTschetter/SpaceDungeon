@@ -11,30 +11,22 @@ import GameplayKit
 
 class Background{
     
-    var backgrounds = [SKSpriteNode]()
+    var backgrounds = [BackgroundTile]()
     var staticObjects = [StaticBackgroundObject]()
     
-    init(){
-        
-        var bgOne = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgOne)
-        var bgTwo = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgTwo)
-        var bgThree = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgThree)
-        var bgFour = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgFour)
-        var bgFive = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgFive)
-        var bgSix = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgSix)
-        var bgSeven = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgSeven)
-        var bgEight = SKSpriteNode(imageNamed: "bg")
-        backgrounds.append(bgEight)
-        
-        
-        var levelOneStatues = StaticBackgroundObject(img: "statue", x: 0, y: 69, z: 2)
+    init(numofScreens: Int, imgs: [String]){
+        for number in 1 ... numofScreens {
+                let bgOne = BackgroundTile(images: imgs, speed: 5)
+                backgrounds.append(bgOne)
+        }
+    }
+    init(numofScreens: Int, imgs: [String], staticbgimg: String){
+        for number in 1 ... numofScreens {
+            let bgOne = BackgroundTile(images: imgs, speed: 5)
+            backgrounds.append(bgOne)
+           
+        }
+        var levelOneStatues = StaticBackgroundObject(img: staticbgimg , x: 0, y: 150 , z: 2)
         staticObjects.append(levelOneStatues)
     }
     
@@ -42,15 +34,32 @@ class Background{
         
         var counter = 0
         for item in backgrounds {
-            
-            env.addChild(item)
-            item.position.x = 0
-            item.position.y = CGFloat(0 + 809 * counter)
-            item.zPosition = 1
+            if counter == 0 {
+                var zcounter = -1
+                for tile in item.getSprites(){
+                    env.addChild(tile)
+                    tile.position.x = 0
+                    tile.position.y = CGFloat(810)
+                    item.setYpos(y: 810)
+                    tile.zPosition = CGFloat(zcounter)
+                    zcounter = zcounter - 1
+                }
+            }
+            else {
+                var zcounter = -1
+                for tile in item.getSprites(){
+                    env.addChild(tile)
+                    tile.position.x = 0
+                    tile.position.y = CGFloat(backgrounds[counter - 1].getYpos() + 810)
+                    item.setYpos(y: backgrounds[counter - 1].getYpos() + 810)
+                    tile.zPosition = CGFloat(zcounter)
+                    zcounter = zcounter - 1
+                }
+           
+            }
             
             counter = counter + 1
         }
-        
         for item in staticObjects{
             env.addChild(item.objectImage)
             item.objectImage.position.x = CGFloat(item.xPos)
@@ -59,25 +68,73 @@ class Background{
         }
         
     }
+    func addImage(count: Int, image: [String], enviornment: GameScene){
+        for number in 0...count{
+            let newImg = BackgroundTile(images: image, speed: 5)
+            backgrounds.append(newImg)
+            for item in backgrounds{
+                for tile in item.getSprites(){
+                    tile.removeFromParent()
+                }
+            }
+            for item in staticObjects{
+                item.objectImage.removeFromParent()
+            }
+            addBackground(env: enviornment)
+        }
+    }
     
     func dynamicBackground(){
         for item in backgrounds {
-            var moveAction = SKAction.moveTo(y: CGFloat(item.position.y - 400), duration: TimeInterval(1))
-            item.run(moveAction)
-            item.position.y = item.position.y
+            for tile in item.getSprites() {
+                var moveAction = SKAction.moveTo(y: CGFloat(tile.position.y - 400), duration: TimeInterval(1))
+                tile.run(moveAction)
+                tile.position.y = tile.position.y
+                item.setYpos(y: Int(tile.position.y))
+                
+            }
             
-           
         }
         
     }
     
+    func addStaticImage(img: String, x: Int, y: Int, enviornment: GameScene, removeothers: Bool){
     
+    
+                let obj = StaticBackgroundObject(img: img, x: x, y: y, z: 2)
+                if removeothers {
+                removeStaticObjects()
+                }
+                staticObjects.append(obj)
+                for item in backgrounds{
+                    for tile in item.getSprites(){
+                    tile.removeFromParent()
+                    }
+                }
+                for item in staticObjects{
+                    item.objectImage.removeFromParent()
+                }
+                addBackground(env: enviornment)
+            
+        
+    }
     func removeStaticObjects(){
         for item in staticObjects {
             item.objectImage.removeFromParent()
         }
     }
     
+    func optimizeBackground(){
+        
+        for item in backgrounds {
+            if item.getYpos() < -1000{
+                for tile in item.getSprites() {
+                tile.removeFromParent()
+                }
+            }
+            
+        }
+    }
     
     
 }

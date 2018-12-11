@@ -22,6 +22,8 @@
 		9C73A9E021B84AA6003C63ED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73A9DF21B84AA6003C63ED /* Player.swift */; };
 		9C8DD75921B8D881001C4B9F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75821B8D881001C4B9F /* Background.swift */; };
 		9C8DD75B21B996C0001C4B9F /* StaticBackgroundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */; };
+		9C8DD75D21B9AF6D001C4B9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75C21B9AF6D001C4B9F /* Game.swift */; };
+		9C8DD75F21B9C793001C4B9F /* scoreTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,11 @@
 		9C031D5F21A49153005D8A22 /* Ledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledge.swift; sourceTree = "<group>"; };
 		9C031DA121A92697005D8A22 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		9C73A9DF21B84AA6003C63ED /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9C77983621BFFBBF0093D3AB /* Background Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Background Tile.swift"; sourceTree = "<group>"; };
 		9C8DD75821B8D881001C4B9F /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticBackgroundObject.swift; sourceTree = "<group>"; };
+		9C8DD75C21B9AF6D001C4B9F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +122,13 @@
 				9C031D2D21A4906D005D8A22 /* GameScene.sks */,
 				9C031D2F21A4906D005D8A22 /* Actions.sks */,
 				9C031D3121A4906D005D8A22 /* GameScene.swift */,
+				9C8DD75C21B9AF6D001C4B9F /* Game.swift */,
 				9C031DA121A92697005D8A22 /* Level.swift */,
 				9C031D5F21A49153005D8A22 /* Ledge.swift */,
+				9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */,
 				9C73A9DF21B84AA6003C63ED /* Player.swift */,
 				9C8DD75821B8D881001C4B9F /* Background.swift */,
+				9C77983621BFFBBF0093D3AB /* Background Tile.swift */,
 				9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */,
 				9C031D3321A4906D005D8A22 /* GameViewController.swift */,
 				9C031D3521A4906D005D8A22 /* Main.storyboard */,
@@ -282,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C77983721BFFBC00093D3AB /* Background Tile.swift in Sources */,
 				9C031D3221A4906D005D8A22 /* GameScene.swift in Sources */,
+				9C8DD75D21B9AF6D001C4B9F /* Game.swift in Sources */,
 				9C8DD75921B8D881001C4B9F /* Background.swift in Sources */,
+				9C8DD75F21B9C793001C4B9F /* scoreTracker.swift in Sources */,
 				9C031D3421A4906D005D8A22 /* GameViewController.swift in Sources */,
 				9C031D2C21A4906D005D8A22 /* AppDelegate.swift in Sources */,
 				9C031DA221A92698005D8A22 /* Level.swift in Sources */,

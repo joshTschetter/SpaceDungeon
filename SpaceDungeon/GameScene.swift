@@ -14,14 +14,16 @@ class GameScene: SKScene {
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
-    var Ledges = [Ledge]()
-    var LevelOne = Level(ledgeAmt: 15, Difficulty: 4, ledgeSprite: "thing" )
     var Obama = Player(img: "obungo", pos: CGPoint(x: 0, y: -100), depth: 2)
-    var bg = Background()
+    var dungeonGame = Game()
+    var levelDone = false
+    
     override func sceneDidLoad() {
-        bg.addBackground(env: self)
-        LevelOne.setEnviornment(env: self)
-        Obama.addToEnviornment(env: self)
+        
+       dungeonGame.addToBackground(env: self)
+       dungeonGame.nextLevel(enviornment: self)
+       Obama.addToEnviornment(env: self)
+    
         
     }
     
@@ -72,9 +74,17 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        bg.dynamicBackground()
-        LevelOne.update()
         
+        dungeonGame.dynamicLevelBackground()
+        dungeonGame.updateCurrentLevel()
+        dungeonGame.optimizeLevelBackground()
+        if (dungeonGame.levelDone()) {
+            dungeonGame.removeStaticObject()
+            
+            dungeonGame.nextLevel(enviornment: self)
+            levelDone = false
+        }
+
     }
-        
+         
 }

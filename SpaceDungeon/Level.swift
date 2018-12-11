@@ -15,8 +15,8 @@ class Level {
     private var ledgeImage: String
     private var xPositions : [Int]
     private var yPositions : [Int]
-    init (ledgeAmt: Int, Difficulty: Int, ledgeSprite: String){
     
+    init (ledgeAmt: Int, Difficulty: Int, ledgeSprite: String){
         ledgeImage = ledgeSprite
         Ledges = [Ledge]()
         xPositions = [Int]()
@@ -28,13 +28,13 @@ class Level {
             
             /////LEFT LEDGES///////////////////////////////////////////////////////////////////////
             if number % 2 == 0 {
-                Ledges.append(Ledge(x: -900 + one * 50 , y: 1000 + 550 * number, img: ledgeSprite))
+                Ledges.append(Ledge(x: -350 + one * 30 , y: 1000 + 550 * number, img: ledgeSprite))
                 Ledges[number].moveX(x: Ledges[number].getXpos())
                 Ledges[number].moveY(y: Ledges[number].getYpos())
             }
             /////RIGHT LEDGES/////////////////////////////////////////////////////////////////////
             else {
-                Ledges.append(Ledge(x: 1000 - one * 50 , y: 1000 + 550 * number, img: ledgeSprite))
+                Ledges.append(Ledge(x: 350 - one * 30 , y: 1000 + 550 * number, img: ledgeSprite))
                 Ledges[number].moveX(x: Ledges[number].getXpos())
                 Ledges[number].moveY(y: Ledges[number].getYpos())
             }
@@ -49,7 +49,7 @@ class Level {
         
     }
     
-    func setEnviornment(env: GameScene){
+    func addLevelLedges(env: GameScene){
         for item in Ledges {
             env.addChild(item.getSprite())
         }
@@ -60,12 +60,32 @@ class Level {
             var moveAction = SKAction.moveTo(y: CGFloat(item.getYpos() - 400), duration: TimeInterval(1))
             item.getSprite().run(moveAction)
             item.setYpos(y: Int(item.getSprite().position.y))
-            item.getSprite().zPosition = 10
-            print(item.getSprite().position.y)
+            item.getSprite().zPosition = 3
+           
         }
         
     }
-    
-    
-    
+    func optimize(){
+        for item in Ledges {
+            if item.getSprite().position.y < -700 {
+                item.getSprite().removeFromParent()
+            }
+        }
+    }
+    func levelDone ()-> Bool {
+        if Ledges[Ledges.count - 1].getSprite().position.y > -300 {
+            return false
+        }
+        else {
+            return true
+           
+        }
+        
+    }
+   
+    func clearLedges(){
+        for item in Ledges {
+            item.getSprite().removeFromParent()
+        }
+    }
 }
