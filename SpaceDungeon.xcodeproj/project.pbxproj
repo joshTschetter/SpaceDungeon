@@ -19,10 +19,17 @@
 		9C031D5221A49070005D8A22 /* SpaceDungeonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D5121A49070005D8A22 /* SpaceDungeonUITests.swift */; };
 		9C031D6021A49153005D8A22 /* Ledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031D5F21A49153005D8A22 /* Ledge.swift */; };
 		9C031DA221A92698005D8A22 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031DA121A92697005D8A22 /* Level.swift */; };
+		9C2E1E1221C8510F004191F5 /* gameSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2E1E1121C8510F004191F5 /* gameSceneController.swift */; };
+		9C2E1E1621CC0918004191F5 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2E1E1521CC0918004191F5 /* Dimensions.swift */; };
+		9C37A6C621C41F0200A3D935 /* staticObjectInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37A6C521C41F0200A3D935 /* staticObjectInitializer.swift */; };
+		9C37A6C821C81B3200A3D935 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37A6C721C81B3200A3D935 /* HomeScreen.swift */; };
+		9C37A6CA21C828DD00A3D935 /* HomeScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C37A6C921C828DD00A3D935 /* HomeScreen.sks */; };
 		9C73A9E021B84AA6003C63ED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73A9DF21B84AA6003C63ED /* Player.swift */; };
 		9C77983721BFFBC00093D3AB /* Background Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77983621BFFBBF0093D3AB /* Background Tile.swift */; };
+		9C77983D21C185E70093D3AB /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77983C21C185E70093D3AB /* UIButton.swift */; };
+		9C77983F21C2DDEC0093D3AB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77983E21C2DDEC0093D3AB /* Store.swift */; };
 		9C8DD75921B8D881001C4B9F /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75821B8D881001C4B9F /* Background.swift */; };
-		9C8DD75B21B996C0001C4B9F /* StaticBackgroundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */; };
+		9C8DD75B21B996C0001C4B9F /* BackgroundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75A21B996C0001C4B9F /* BackgroundObject.swift */; };
 		9C8DD75D21B9AF6D001C4B9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75C21B9AF6D001C4B9F /* Game.swift */; };
 		9C8DD75F21B9C793001C4B9F /* scoreTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */; };
 /* End PBXBuildFile section */
@@ -63,10 +70,17 @@
 		9C031D5321A49070005D8A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C031D5F21A49153005D8A22 /* Ledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledge.swift; sourceTree = "<group>"; };
 		9C031DA121A92697005D8A22 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		9C2E1E1121C8510F004191F5 /* gameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameSceneController.swift; sourceTree = "<group>"; };
+		9C2E1E1521CC0918004191F5 /* Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		9C37A6C521C41F0200A3D935 /* staticObjectInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staticObjectInitializer.swift; sourceTree = "<group>"; };
+		9C37A6C721C81B3200A3D935 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		9C37A6C921C828DD00A3D935 /* HomeScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HomeScreen.sks; sourceTree = "<group>"; };
 		9C73A9DF21B84AA6003C63ED /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9C77983621BFFBBF0093D3AB /* Background Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Background Tile.swift"; sourceTree = "<group>"; };
+		9C77983C21C185E70093D3AB /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9C77983E21C2DDEC0093D3AB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9C8DD75821B8D881001C4B9F /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticBackgroundObject.swift; sourceTree = "<group>"; };
+		9C8DD75A21B996C0001C4B9F /* BackgroundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundObject.swift; sourceTree = "<group>"; };
 		9C8DD75C21B9AF6D001C4B9F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,15 +136,22 @@
 				9C031D2B21A4906D005D8A22 /* AppDelegate.swift */,
 				9C031D2D21A4906D005D8A22 /* GameScene.sks */,
 				9C031D2F21A4906D005D8A22 /* Actions.sks */,
+				9C37A6C921C828DD00A3D935 /* HomeScreen.sks */,
+				9C2E1E1521CC0918004191F5 /* Dimensions.swift */,
 				9C031D3121A4906D005D8A22 /* GameScene.swift */,
+				9C2E1E1121C8510F004191F5 /* gameSceneController.swift */,
+				9C77983C21C185E70093D3AB /* UIButton.swift */,
+				9C77983E21C2DDEC0093D3AB /* Store.swift */,
 				9C8DD75C21B9AF6D001C4B9F /* Game.swift */,
+				9C37A6C721C81B3200A3D935 /* HomeScreen.swift */,
 				9C031DA121A92697005D8A22 /* Level.swift */,
 				9C031D5F21A49153005D8A22 /* Ledge.swift */,
 				9C8DD75E21B9C793001C4B9F /* scoreTracker.swift */,
 				9C73A9DF21B84AA6003C63ED /* Player.swift */,
 				9C8DD75821B8D881001C4B9F /* Background.swift */,
+				9C37A6C521C41F0200A3D935 /* staticObjectInitializer.swift */,
 				9C77983621BFFBBF0093D3AB /* Background Tile.swift */,
-				9C8DD75A21B996C0001C4B9F /* StaticBackgroundObject.swift */,
+				9C8DD75A21B996C0001C4B9F /* BackgroundObject.swift */,
 				9C031D3321A4906D005D8A22 /* GameViewController.swift */,
 				9C031D3521A4906D005D8A22 /* Main.storyboard */,
 				9C031D3821A49070005D8A22 /* Assets.xcassets */,
@@ -264,6 +285,7 @@
 			files = (
 				9C031D3721A4906D005D8A22 /* Main.storyboard in Resources */,
 				9C031D2E21A4906D005D8A22 /* GameScene.sks in Resources */,
+				9C37A6CA21C828DD00A3D935 /* HomeScreen.sks in Resources */,
 				9C031D3921A49070005D8A22 /* Assets.xcassets in Resources */,
 				9C031D3C21A49070005D8A22 /* LaunchScreen.storyboard in Resources */,
 				9C031D3021A4906D005D8A22 /* Actions.sks in Resources */,
@@ -292,7 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C77983721BFFBC00093D3AB /* Background Tile.swift in Sources */,
+				9C37A6C621C41F0200A3D935 /* staticObjectInitializer.swift in Sources */,
+				9C77983D21C185E70093D3AB /* UIButton.swift in Sources */,
+				9C2E1E1621CC0918004191F5 /* Dimensions.swift in Sources */,
 				9C031D3221A4906D005D8A22 /* GameScene.swift in Sources */,
+				9C37A6C821C81B3200A3D935 /* HomeScreen.swift in Sources */,
 				9C8DD75D21B9AF6D001C4B9F /* Game.swift in Sources */,
 				9C8DD75921B8D881001C4B9F /* Background.swift in Sources */,
 				9C8DD75F21B9C793001C4B9F /* scoreTracker.swift in Sources */,
@@ -300,7 +326,9 @@
 				9C031D2C21A4906D005D8A22 /* AppDelegate.swift in Sources */,
 				9C031DA221A92698005D8A22 /* Level.swift in Sources */,
 				9C73A9E021B84AA6003C63ED /* Player.swift in Sources */,
-				9C8DD75B21B996C0001C4B9F /* StaticBackgroundObject.swift in Sources */,
+				9C8DD75B21B996C0001C4B9F /* BackgroundObject.swift in Sources */,
+				9C2E1E1221C8510F004191F5 /* gameSceneController.swift in Sources */,
+				9C77983F21C2DDEC0093D3AB /* Store.swift in Sources */,
 				9C031D6021A49153005D8A22 /* Ledge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883DK65VTV;
 				INFOPLIST_FILE = SpaceDungeon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 883DK65VTV;
 				INFOPLIST_FILE = SpaceDungeon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

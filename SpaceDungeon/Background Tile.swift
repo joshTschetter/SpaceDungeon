@@ -19,7 +19,10 @@ class BackgroundTile {
     init(images: [String], speed: Int) {
         
         for item in images {
-            Tile.append(SKSpriteNode(imageNamed: item))
+            let newSprite = SKSpriteNode(imageNamed: item)
+            newSprite.size.width = Dimensions().screenWidth
+            newSprite.size.height = Dimensions().screenHeight
+            Tile.append(newSprite)
         }
         movementSpeed = speed
 

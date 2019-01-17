@@ -12,7 +12,8 @@ import GameplayKit
 
 class scoreTracker {
     
-    private var currentscore : SKLabelNode
+    var currentscore : SKLabelNode
+    private var score = 0
     var xPos : Int
     var yPos : Int
     var zPos : Int
@@ -22,6 +23,7 @@ class scoreTracker {
         currentscore = SKLabelNode(text: "\(score)")
         currentscore.fontSize = CGFloat(fontsize)
         currentscore.fontName = font
+        currentscore.fontColor = .black
         xPos = x
         yPos = y
         zPos = z
@@ -36,7 +38,19 @@ class scoreTracker {
     }
     
     func updateScore(updatedScore: Int){
-        currentscore.text = "\(updatedScore)"
+        score = updatedScore
+        currentscore.text = "\(score)"
     }
-    
+    func addOne() {
+        currentscore.text = "\(score + 1)"
+        score = score + 1
+    }
+    func getLabel()-> SKLabelNode {
+        return currentscore
+    }
+    func changePosition(pos: CGPoint){
+        currentscore.position.x = -Dimensions().screenWidth/2 + 58
+        currentscore.position.y = Dimensions().screenHeight/2 - 63
+        currentscore.zPosition = 21
+    }
 }
